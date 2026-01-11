@@ -1,19 +1,42 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+bin/
+lib/
+lib64/
+include/
+pyvenv.cfg
+*.cfg
+
 # Python
 __pycache__/
 *.py[cod]
-*.log
+*$py.class
+*.so
+.Python
 CACHEDIR.TAG
 
-# Virtualenv
-venv/
-.env
-
 # Django
+*.log
 db.sqlite3
+db.sqlite3-journal
+media/
 staticfiles/
+local_settings.py
 
 # IDE
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 
 # Docker
+.env
+.env.local
 *.pid
+
+# OS
+.DS_Store
+Thumbs.db
