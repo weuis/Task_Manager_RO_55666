@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kk*usk&#n%!3$n8zl=whj8pu7_8ohsbaklj00ishxhzv_)u!=^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -74,9 +74,13 @@ WSGI_APPLICATION = 'Task_Manager_w_Docker.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "cloud_task_manager",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",
+        "PORT": "5432",
     }
 }
 
