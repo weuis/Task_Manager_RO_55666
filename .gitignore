@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+CACHEDIR.TAG
+
+# Virtualenv
+venv/
+.env
+
+# Django
+db.sqlite3
+staticfiles/
+
+# IDE
+.idea/
+
+# Docker
+*.pid
