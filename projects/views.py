@@ -22,7 +22,7 @@ def project_create(request):
             return redirect("projects:list")
     else:
         form = ProjectForm()
-    return render(request, "projects/project_form.html", {"form": form})
+    return render(request, "projects/project_create.html", {"form": form})
 
 
 @login_required
@@ -35,7 +35,7 @@ def project_update(request, pk):
             return redirect("projects:list")
     else:
         form = ProjectForm(instance=project)
-    return render(request, "projects/project_form.html", {"form": form})
+    return render(request, "projects/project_update.html", {"form": form})
 
 
 @login_required
@@ -44,4 +44,4 @@ def project_delete(request, pk):
     if request.method == "POST":
         project.delete()
         return redirect("projects:list")
-    return render(request, "projects/project_confirm_delete.html", {"project": project})
+    return render(request, "projects/project_delete.html", {"project": project})

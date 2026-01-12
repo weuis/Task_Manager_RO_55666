@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Project</title>
+</head>
+<body>
+
+<h1>Edit Project</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>
+
+<br>
+<a href="{% url 'projects:list' %}">Back to projects</a>
+
+</body>
+</html>
