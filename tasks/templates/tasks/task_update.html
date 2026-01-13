@@ -1,0 +1,10 @@
+<h1>Edit task: {{ task.title }}</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Update</button>
+</form>
+
+<br>
+<a href="{% url 'tasks:list' task.project.id %}">Back to tasks</a>
