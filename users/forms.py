@@ -1,11 +1,17 @@
-from django.contrib.auth import get_user_model
 from django import forms
-from .models import TaskAssignment
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
-User = get_user_model()
 
+class RegisterForm(UserCreationForm):
+    email = forms.EmailField(required=True)
 
-class TaskAssignmentForm(forms.ModelForm):
     class Meta:
-        model = TaskAssignment
-        fields = ["user"]
+        model = User
+        fields = ["username", "email", "password1", "password2"]
+
+
+class UserUpdateForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ["username", "email"]
