@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Comment</title>
+</head>
+<body>
+
+<h1>Add comment to task: "{{ task.title }}"</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">💾 Save</button>
+</form>
+
+<br>
+<a href="{% url 'comments:list' task.id %}">⬅ Back to comments</a>
+
+</body>
+</html>

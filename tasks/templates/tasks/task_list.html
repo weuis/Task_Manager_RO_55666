@@ -13,5 +13,6 @@
     </li>
   {% empty %}
     <li>No projects yet</li>
+  <a href="{% url 'comments:list' task.id %}">Comments</a>
   {% endfor %}
 </ul>

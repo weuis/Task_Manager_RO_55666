@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comments</title>
+</head>
+<body>
+
+<h1>Comments for task: "{{ task.title }}"</h1>
+
+<a href="{% url 'comments:create' task.id %}">➕ Add comment</a>
+<br><br>
+
+<ul>
+    {% for comment in comments %}
+        <li>
+            <strong>{{ comment.user.username }}</strong>:
+            {{ comment.content }}
+            <br>
+            <small>{{ comment.created_at }}</small>
+
+            {% if comment.user == request.user %}
+                <br>
+                <a href="{% url 'comments:update' comment.id %}">✏️ Edit</a>
+                |
+                <a href="{% url 'comments:delete' comment.id %}">❌ Delete</a>
+            {% endif %}
+        </li>
+        <hr>
+    {% empty %}
+        <li>No comments yet.</li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="javascript:history.back()">⬅ Back</a>
+
+</body>
+</html>
