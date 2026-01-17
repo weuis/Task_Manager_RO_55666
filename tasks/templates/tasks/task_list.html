@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <h1>My Projects</h1>
 
 <a href="{% url 'projects:create' %}">Create project</a>
@@ -16,3 +18,4 @@
   <a href="{% url 'comments:list' task.id %}">Comments</a>
   {% endfor %}
 </ul>
+{% endblock %}

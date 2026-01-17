@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 <h1>My Projects</h1>
-
+{% block content %}
 <a href="{% url 'projects:create' %}">Create project</a>
 
 <ul>
@@ -13,3 +14,4 @@
     <li>No projects yet</li>
   {% endfor %}
 </ul>
+{% endblock %}

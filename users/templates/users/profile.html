@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <h1>My Profile</h1>
 
 <form method="post">
@@ -8,3 +10,4 @@
 
 <br>
 <a href="{% url 'users:delete' %}">Delete account</a>
+{% endblock %}

@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <h1>Delete task</h1>
 
 <p>Are you sure you want to delete <strong>{{ task.title }}</strong>?</p>
@@ -9,3 +11,4 @@
 
 <br>
 <a href="{% url 'tasks:list' task.project.id %}">Cancel</a>
+{% endblock %}
