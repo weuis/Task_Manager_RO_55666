@@ -34,17 +34,22 @@ Numer indeksu: 556666
 * Forwardowanie ruchu HTTP do Django
 
 ## Uruchomienie projektu
-1. Sklonuj repozytorium
-2. Uruchom:
-   docker compose up --build
-3. Aplikacja доступна за адресою:
-   http://localhost:8000
+
+Requirements:
+- Docker
+- Docker Compose
 
 ## Uruchomienie całego środowiska:
 
 ```bash
 docker compose up
 ```
+
+1. Sklonuj repozytorium
+2. Uruchom:
+   docker compose up --build
+3. Aplikacja jest dostępna za adresem:
+   http://localhost:8000
 
 ## 🧩 Funkcjonalności aplikacji (5 CRUD)
 
