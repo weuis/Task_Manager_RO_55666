@@ -9,7 +9,15 @@ Aplikacja webowa umożliwiająca zarządzanie projektami i zadaniami w środowis
 
 **Typ:** Web application (cloud-ready)
 
-**Kontenery (minimum 3):**
+## Temat projektu
+Webowa aplikacja do zarządzania projektami, zadaniami i komentarzami.
+
+## Autor
+Rozehan Oleksii
+Numer indeksu: 556666
+
+
+## Kontenery
 
 ### 1. Web (Django)
 * Backend aplikacji
@@ -25,7 +33,14 @@ Aplikacja webowa umożliwiająca zarządzanie projektami i zadaniami w środowis
 * Obsługa statycznych plików
 * Forwardowanie ruchu HTTP do Django
 
-👉 **Uruchomienie całego środowiska:**
+## Uruchomienie projektu
+1. Sklonuj repozytorium
+2. Uruchom:
+   docker compose up --build
+3. Aplikacja доступна за адресою:
+   http://localhost:8000
+
+## Uruchomienie całego środowiska:
 
 ```bash
 docker compose up
