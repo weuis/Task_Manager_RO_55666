@@ -33,11 +33,22 @@ Numer indeksu: 556666
 * Obsługa statycznych plików
 * Forwardowanie ruchu HTTP do Django
 
+## Architektura aplikacji
+
+- Django (web)
+- PostgreSQL (baza danych)
+- Nginx (reverse proxy)
+
+Aplikacja uruchamiana jest w 3 kontenerach Docker.
+
 ## Uruchomienie projektu
 
-Requirements:
+Wymagania:
 - Docker
 - Docker Compose
+
+Uruchomienie:
+docker compose up --build
 
 ## Uruchomienie całego środowiska:
 
@@ -48,9 +59,8 @@ docker compose up
 1. Sklonuj repozytorium
 2. Uruchom:
    docker compose up --build
-3. Aplikacja jest dostępna za adresem:
-   http://localhost:8000
-
+3. Aplikacja dostępna pod adresem:
+http://localhost
 ## 🧩 Funkcjonalności aplikacji (5 CRUD)
 
 ### 1️⃣ Zarządzanie użytkownikami (Users – CRUD)
@@ -119,4 +129,4 @@ docker compose up
 * **Baza danych:** PostgreSQL
 * **Konteneryzacja:** Docker, Docker Compose
 * **Serwer HTTP:** Nginx
-```
+
